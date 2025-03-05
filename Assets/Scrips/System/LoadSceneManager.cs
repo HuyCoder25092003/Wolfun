@@ -22,17 +22,17 @@ public class LoadSceneManager : BYSingletonMono<LoadSceneManager>
         AsyncOperation async = SceneManager.LoadSceneAsync(scene_name, LoadSceneMode.Single);
         WaitForSeconds wait_s = new WaitForSeconds(time_delay);
         int count = 0;
-        while(count<50)
+        while(count<101)
         {
             yield return wait_s;
             count++;
-            progress_lb.text = count.ToString() + "%";
+            progress_lb.text = $"{count}%";
             image_progress.rectTransform.sizeDelta = new Vector2(width * (float)count / 100f, 42);
         }
         while(!async.isDone)
         {
             yield return wait_s;
-            progress_lb.text = ((int)(async.progress*100)).ToString() + "%";
+            progress_lb.text = $"{((int)(async.progress * 100))}%";
             image_progress.rectTransform.sizeDelta = new Vector2(width* async.progress,42) ;
         }
         callback?.Invoke();
@@ -48,17 +48,17 @@ public class LoadSceneManager : BYSingletonMono<LoadSceneManager>
         AsyncOperation async = SceneManager.LoadSceneAsync(scene_index, LoadSceneMode.Single);
         WaitForSeconds wait_s = new WaitForSeconds(time_delay);
         int count = 0;
-        while (count < 50)
+        while (count < 101)
         {
             yield return wait_s;
             count++;
-            progress_lb.text = count.ToString() + "%";
+            progress_lb.text = $"{count}%";
             image_progress.rectTransform.sizeDelta = new Vector2(width * (float)count / 100f, 42);
         }
         while (!async.isDone)
         {
             yield return wait_s;
-            progress_lb.text = ((int)(async.progress * 100)).ToString() + "%";
+            progress_lb.text = $"{((int)(async.progress * 100))}%";
             image_progress.rectTransform.sizeDelta = new Vector2(width * async.progress, 42);
         }
         callback?.Invoke();
