@@ -1,0 +1,7 @@
+id	name	icon	value	valueHaveBuy	plantStage	timeFinished	valueBorrow	timeDestroy	valueProduct
+1	Fields	Fields	3	0	0	0	500	1	0
+2	Tomato	Tomato	10	5	4	10	0	1	40
+3	Blueberry	Blueberry	10	8	4	15	0	1	40
+4	Cow	Cow	2	15	1	30	0	1	100
+5	Strawberry	Strawberry	5	20	4	5	0	1	20
+6	Worker	Worker	1	0	0	2	500	1	0
