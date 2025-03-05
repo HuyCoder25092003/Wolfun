@@ -29,7 +29,7 @@ MonoBehaviour:
     value: 10
     valueHaveBuy: 5
     plantStage: 4
-    timeFinished: 1
+    timeFinished: 10
     valueBorrow: 0
     timeDestroy: 1
     valueProduct: 40

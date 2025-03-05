@@ -50,7 +50,7 @@ public class PlotManager : MonoBehaviour
                 else
                 {
                     timer = data.timerDestroy;
-                    current_timer = selectedItem.TimeDestroy * 60/*3600*/ * multiplier;
+                    current_timer = selectedItem.TimeDestroy * 3600 * multiplier;
                 }
                 isPlanted = data.isPlanted = true;
                 plantStage = data.plantStage;
@@ -79,7 +79,7 @@ public class PlotManager : MonoBehaviour
             if (timer <= 0)
             {
                 UpdateAnimal();
-                timer = selectedItem.TimeDestroy * 60/*3600*/ * multiplier;
+                timer = selectedItem.TimeDestroy * 3600 * multiplier;
                 current_timer = timer;
             }
         }
@@ -96,7 +96,7 @@ public class PlotManager : MonoBehaviour
                 {
                     plantStage = newStage = selectedItem.PlantStage - 1;
                     UpdatePlant();
-                    timer = selectedItem.TimeDestroy * 60/*3600*/ * multiplier;
+                    timer = selectedItem.TimeDestroy * 3600 * multiplier;
                     current_timer = timer;
                     isDestroy = true;
                 }
